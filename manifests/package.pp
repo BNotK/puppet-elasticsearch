@@ -153,10 +153,10 @@ class elasticsearch::package {
 
       }
 
-    } else {
-      if ($elasticsearch::manage_repo and $facts['os']['family'] == 'Debian') {
-        Class['apt::update'] -> Package['elasticsearch']
-      }
+  # } else {
+  #   if ($elasticsearch::manage_repo and $facts['os']['family'] == 'Debian') {
+  #     Class['apt::update'] -> Package['elasticsearch']
+  #   }
     }
 
   # Package removal
